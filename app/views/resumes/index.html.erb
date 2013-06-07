@@ -1,0 +1,10 @@
+<div class="large-6 large-centered small-centered">
+  <h2>Resumes</h2>
+</div>
+<% @resumes.each do |resume| %>
+  <div class="panel">
+    <h4><%= link_to resume.name, resume %></h4>
+    <p><%= resume.description %></p></br>
+  </div>
+<% end %>
+<%= link_to "New Resume", new_resume_path, :class => "button" %>
