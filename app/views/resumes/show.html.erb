@@ -1,5 +1,14 @@
 <h2><%= @resume.name %></h2>
 <p><%= @resume.description %></p>
+<ul class="pane">
+  <% @resume.educations.each do |education| %>
+    <li>
+      <%= link_to education.name, [@resume, education] %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add Education", new_resume_education_path(@resume), :class => "button" %>
 <%= link_to "Edit Resume", edit_resume_path, :class => "button" %>
 <%= link_to "Delete Resume", @resume, :method => :delete,
                             :confirm => "Are you sure", :class => "button" %>

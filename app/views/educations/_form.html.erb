@@ -1,0 +1,9 @@
+<%= simple_form_for [@resume, @education] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+
+  <%= f.input :start_at, as: :date %>
+  <%= f.input :end_at, as: :date %>
+
+  <%= f.submit :class => "button" %>
+<% end %>

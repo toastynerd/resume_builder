@@ -2,7 +2,9 @@ ResumeProject::Application.routes.draw do
 
   root :to => "resumes#index"
 
-  resources :resumes
+  resources :resumes do
+    resources :educations
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
