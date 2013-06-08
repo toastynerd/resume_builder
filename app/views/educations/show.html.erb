@@ -1,7 +1,0 @@
-<h2>Education for resume: <%= @resume.name %></h2>
-<h4><%= @education.name %></h4>
-<p><%= @education.description %></p></br>
-<p>From:<%= @education.start_at %></p></br>
-<p>Until:<%= @education.end_at %></p>
-<%= link_to "Edit Education", [:edit, @resume, @education], :class => "button" %>
-<%= link_to "Delete Education", [@resume, @education], :method => :delete, :confirm => "Are you sure?", :class => "button" %> 

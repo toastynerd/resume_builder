@@ -11,19 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130608001952) do
-
-  create_table "educations", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.date     "start_at"
-    t.date     "end_at"
-    t.integer  "resume_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  add_index "educations", ["resume_id"], :name => "index_educations_on_resume_id"
+ActiveRecord::Schema.define(:version => 20130607162930) do
 
   create_table "resumes", :force => true do |t|
     t.string   "name"
